@@ -1,7 +1,6 @@
 import { BookOpenIcon, HomeIcon, MicIcon, UserIcon, WandIcon } from '../components/icons'
 import { aluno } from '../mocks/aluno'
 import { Biblioteca } from '../pages/aluno/Biblioteca'
-import { CheckinHumor } from '../pages/aluno/CheckinHumor'
 import { Duelos } from '../pages/aluno/Duelos'
 import { Estudio } from '../pages/aluno/Estudio'
 import { Home } from '../pages/aluno/Home'
@@ -41,12 +40,6 @@ export const alunoProfile = {
       title: 'Estúdio de Criação',
       subtitle: 'Transforme seu aprendizado em materiais autorais ricos',
       Component: Estudio,
-    },
-    humor: {
-      title: 'Diário de Humor',
-      subtitle: 'Sabiá se importa com o seu bem-estar',
-      Component: CheckinHumor,
-      navActiveId: 'home',
     },
     trilha: {
       title: 'Trilha de Revisão',

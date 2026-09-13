@@ -13,12 +13,3 @@ export const mensagemPorEstado = {
   cansado: 'Entendido, Maitê. Que tal algo mais leve por hoje?',
   frustrado: 'Sinto muito, Maitê. Sem pressão hoje — estamos aqui quando você quiser.',
 }
-
-export const historicoUltimosDias = [
-  { dia: 'Ter', estadoId: 'bem' },
-  { dia: 'Qua', estadoId: 'bem' },
-  { dia: 'Qui', estadoId: 'normal' },
-  { dia: 'Sex', estadoId: 'bem' },
-  { dia: 'Sáb', estadoId: null },
-  { dia: 'Dom', estadoId: null },
-]

@@ -16,7 +16,7 @@ export function Estudio() {
   const showToast = useToast()
 
   return (
-    <div className="flex flex-1 flex-col gap-3 px-4 pb-6">
+    <div className="flex flex-1 flex-col gap-3">
       {estudioCriacoes.map((criacao) => {
         const Icon = ICONS_POR_TIPO[criacao.tipo]
         return (

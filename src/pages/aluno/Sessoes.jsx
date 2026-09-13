@@ -24,7 +24,7 @@ export function Sessoes() {
   const sessoes = SESSOES_POR_TAB[tabAtiva]
 
   return (
-    <div className="flex flex-1 flex-col gap-3 px-4 pb-6">
+    <div className="flex flex-1 flex-col gap-3">
       <Banner icon={<InfoCircleIcon className="mt-0.5 h-4 w-4 shrink-0" />}>
         {SESSAO_EM_VIDEO_MSG}
       </Banner>

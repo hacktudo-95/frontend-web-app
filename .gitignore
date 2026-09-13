@@ -34,3 +34,4 @@ dist-ssr
 # Docs and instructions not meant to be published in the repo
 docs
 CLAUDE.md
+.vercel

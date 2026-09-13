@@ -11,7 +11,7 @@ export function DashboardProfessor() {
   const showToast = useToast()
 
   return (
-    <div className="flex flex-1 flex-col gap-3 px-4 pb-6">
+    <div className="flex flex-1 flex-col gap-3">
       <Banner icon={<InfoCircleIcon className="mt-0.5 h-4 w-4 shrink-0" />}>
         {alertaLacunaCritica.turma} tem lacuna crítica em {alertaLacunaCritica.topico} (
         {alertaLacunaCritica.percentual}%)

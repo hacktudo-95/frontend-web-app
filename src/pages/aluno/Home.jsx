@@ -1,4 +1,4 @@
-import { AchievementBadge } from '../../components/ui/AchievementBadge'
+import { HumorCheckinCard } from '../../components/ui/HumorCheckinCard'
 import { MissionCard } from '../../components/ui/MissionCard'
 import { QuickActionCard } from '../../components/ui/QuickActionCard'
 import { StatCard } from '../../components/ui/StatCard'
@@ -12,7 +12,7 @@ import {
   TrendingUpIcon,
   UsersIcon,
 } from '../../components/icons'
-import { aluno, conquistasRecentes, missaoPendente } from '../../mocks/aluno'
+import { aluno, missaoPendente } from '../../mocks/aluno'
 
 const SESSAO_EM_VIDEO_MSG = 'Essa interação é demonstrada no vídeo da sessão ao vivo.'
 
@@ -21,7 +21,9 @@ export function Home() {
   const navigate = useNavigate()
 
   return (
-    <div className="flex flex-1 flex-col gap-4 px-4 pb-6">
+    <div className="flex flex-1 flex-col gap-4">
+      <HumorCheckinCard />
+
       <section className="flex gap-3">
         <StatCard
           icon={<FlameIcon className="h-4 w-4" />}
@@ -75,15 +77,6 @@ export function Home() {
             subtitle="Jogar com o 8º ano B"
             onClick={() => navigate('duelos')}
           />
-        </div>
-      </section>
-
-      <section>
-        <h2 className="mb-3 text-base font-semibold text-text-dark">Conquistas recentes</h2>
-        <div className="flex flex-wrap gap-2">
-          {conquistasRecentes.map((conquista) => (
-            <AchievementBadge key={conquista.id} titulo={conquista.titulo} icon={conquista.icon} />
-          ))}
         </div>
       </section>
     </div>

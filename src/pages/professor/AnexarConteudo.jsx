@@ -19,7 +19,7 @@ export function AnexarConteudo() {
   const navigate = useNavigate()
 
   return (
-    <div className="flex flex-1 flex-col gap-3 px-4 pb-6">
+    <div className="flex flex-1 flex-col gap-3">
       <FieldRow
         label="Turma selecionada"
         value={turmaSelecionada}

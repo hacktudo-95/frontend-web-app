@@ -10,7 +10,7 @@ export function Biblioteca() {
   const showToast = useToast()
 
   return (
-    <div className="flex flex-1 flex-col gap-3 px-4 pb-6">
+    <div className="flex flex-1 flex-col gap-3">
       {materias.map((materia) => (
         <SubjectCard
           key={materia.id}

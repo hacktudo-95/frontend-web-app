@@ -6,7 +6,7 @@ import { placarTurmas, proximoQuizColetivo } from '../../mocks/duelos'
 
 export function Duelos() {
   return (
-    <div className="flex flex-1 flex-col gap-3 px-4 pb-6">
+    <div className="flex flex-1 flex-col gap-3">
       <CollectiveScoreBanner
         titulo={`Força Coletiva do ${aluno.turma.replace('ano ', '')}!`}
         descricao="Toda sessão concluída por você soma pontos para a nossa sala no ranking escolar."

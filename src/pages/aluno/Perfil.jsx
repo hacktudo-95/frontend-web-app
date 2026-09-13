@@ -11,7 +11,7 @@ import {
 
 export function Perfil() {
   return (
-    <div className="flex flex-1 flex-col gap-3 px-4 pb-6">
+    <div className="flex flex-1 flex-col gap-3">
       <ProfileHeaderCard nome={aluno.nome} turma={aluno.turma} escola={aluno.escola} />
 
       <section className="rounded-2xl bg-white p-4 shadow-sm">

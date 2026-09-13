@@ -17,7 +17,7 @@ const ICONS_POR_METRICA = {
 
 export function PainelInstitucional() {
   return (
-    <div className="flex flex-1 flex-col gap-3 px-4 pb-6">
+    <div className="flex flex-1 flex-col gap-3">
       <Banner
         tom="verde"
         icon={<CheckCircleIcon className="mt-0.5 h-4 w-4 shrink-0" />}

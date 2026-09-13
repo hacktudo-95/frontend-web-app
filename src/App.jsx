@@ -3,6 +3,7 @@ import { AppShell } from './components/layout/AppShell'
 import { BottomNav } from './components/layout/BottomNav'
 import { Header } from './components/layout/Header'
 import { ProfileSwitcher } from './components/layout/ProfileSwitcher'
+import { HumorProvider } from './context/HumorContext'
 import { NavigationProvider } from './context/NavigationContext'
 import { ToastProvider } from './context/ToastContext'
 import { profileOrder, profiles } from './profiles'
@@ -26,41 +27,32 @@ function App() {
 
   return (
     <ToastProvider>
-      <NavigationProvider navigate={selectTab}>
-        <AppShell>
-          <Header
-            title={page.title}
-            subtitle={page.subtitle}
-            actionSlot={
-              profileId === 'aluno' &&
-              activeTab === 'home' && (
-                <button
-                  type="button"
-                  aria-label="Check-in de humor"
-                  onClick={() => setActiveTab('humor')}
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-lilac text-lg"
-                >
-                  🙂
-                </button>
-              )
-            }
-            avatarSlot={
-              <ProfileSwitcher
-                profiles={profileOrder.map((id) => profiles[id])}
-                activeProfileId={profileId}
-                avatarLabel={profile.avatarLabel}
-                onSelect={selectProfile}
-              />
-            }
-          />
-          <Component />
-          <BottomNav
-            items={profile.navItems}
-            activeId={page.navActiveId ?? activeTab}
-            onSelect={selectTab}
-          />
-        </AppShell>
-      </NavigationProvider>
+      <HumorProvider>
+        <NavigationProvider navigate={selectTab}>
+          <AppShell>
+            <Header
+              title={page.title}
+              subtitle={page.subtitle}
+              avatarSlot={
+                <ProfileSwitcher
+                  profiles={profileOrder.map((id) => profiles[id])}
+                  activeProfileId={profileId}
+                  avatarLabel={profile.avatarLabel}
+                  onSelect={selectProfile}
+                />
+              }
+            />
+            <main className="flex flex-1 flex-col px-6 pb-8">
+              <Component />
+            </main>
+            <BottomNav
+              items={profile.navItems}
+              activeId={page.navActiveId ?? activeTab}
+              onSelect={selectTab}
+            />
+          </AppShell>
+        </NavigationProvider>
+      </HumorProvider>
     </ToastProvider>
   )
 }

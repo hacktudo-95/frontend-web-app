@@ -12,7 +12,7 @@ export function BaseDeConhecimento() {
   const turma = turmasDisponiveis.find((t) => t.id === turmaId)
 
   return (
-    <div className="flex flex-1 flex-col gap-3 px-4 pb-6">
+    <div className="flex flex-1 flex-col gap-3">
       <section>
         <h2 className="mb-3 text-xs font-semibold uppercase tracking-wide text-text-gray-2">
           Turma selecionada

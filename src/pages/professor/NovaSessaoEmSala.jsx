@@ -10,7 +10,7 @@ export function NovaSessaoEmSala() {
   const showToast = useToast()
 
   return (
-    <div className="flex flex-1 flex-col gap-3 px-4 pb-6">
+    <div className="flex flex-1 flex-col gap-3">
       <section>
         <h2 className="mb-3 text-base font-semibold text-text-dark">Configurações Básicas</h2>
         <div className="flex flex-col gap-2">

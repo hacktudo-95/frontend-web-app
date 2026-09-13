@@ -6,7 +6,7 @@ import { alertasDeTendencia, humorMedioTurmas, sugestaoDora } from '../../mocks/
 
 export function OrientacaoEducacional() {
   return (
-    <div className="flex flex-1 flex-col gap-3 px-4 pb-6">
+    <div className="flex flex-1 flex-col gap-3">
       <Banner tom="amber" icon={<LockIcon className="mt-0.5 h-4 w-4 shrink-0" />}>
         Dados individuais não são acessíveis neste painel — apenas tendências agregadas
       </Banner>
