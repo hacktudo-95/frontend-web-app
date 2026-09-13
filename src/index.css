@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  /* Marca / tema — docs/paleta-de-cores.md */
+  --color-brand-purple: #7c5ce5;
+  --color-brand-purple-secondary: #6e50ce;
+  --color-brand-purple-dark: #7657d5;
+  --color-brand-purple-soft-text: #6049aa;
+  --color-brand-lilac: #e9e3fa;
+  --color-brand-lilac-light: #b9a8f3;
+  --color-app-bg: #f4f1ff;
+
+  /* Estados (avatar) */
+  --color-state-speaking: #7c5ce5;
+  --color-state-listening: #16a474;
+  --color-state-thinking: #e89a35;
+  --color-state-error: #d84f67;
+
+  /* Sucesso / gravação */
+  --color-success-green: #36b37e;
+  --color-success-green-text: #36a173;
+
+  /* Erro / ao vivo */
+  --color-error-red: #b93d52;
+  --color-live-pink: #ea526f;
+
+  /* Neutros (texto/UI) */
+  --color-text-dark: #282238;
+  --color-text-medium: #302b3d;
+  --color-text-gray: #5e5871;
+  --color-text-gray-2: #6d667e;
+  --color-text-light-gray: #8a8499;
+}
