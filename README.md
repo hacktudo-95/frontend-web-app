@@ -1,6 +1,6 @@
-# Maiêutica
+# Sabiá
 
-Frontend web mockado (sem backend real) do MVP de hackathon **Maiêutica**. O app
+Frontend web mockado (sem backend real) do MVP de hackathon **Sabiá**. O app
 simula o uso de um smartphone como ferramenta pedagógica: o aluno pratica
 conteúdos com IA por voz, o professor acompanha lacunas de aprendizagem, e a
 gestão escolar acompanha métricas agregadas — tudo em uma única demo,

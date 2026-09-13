@@ -1,24 +1,25 @@
 @import "tailwindcss";
 
 @theme {
-  /* Marca / tema — docs/paleta-de-cores.md */
-  --color-brand-purple: #7c5ce5;
-  --color-brand-purple-secondary: #6e50ce;
-  --color-brand-purple-dark: #7657d5;
-  --color-brand-purple-soft-text: #6049aa;
-  --color-brand-lilac: #e9e3fa;
-  --color-brand-lilac-light: #b9a8f3;
-  --color-app-bg: #f4f1ff;
+  /* Marca / tema — docs/paleta-de-cores.md (rebrand Sabiá: nomes de token
+     mantidos por compatibilidade, valores atualizados para verde/dourado) */
+  --color-brand-purple: #1b4332;
+  --color-brand-purple-secondary: #123328;
+  --color-brand-purple-dark: #1b4332;
+  --color-brand-purple-soft-text: #23553d;
+  --color-brand-lilac: #e4efe8;
+  --color-brand-lilac-light: #e8ce8c;
+  --color-app-bg: #f5f2ea;
 
   /* Estados (avatar) */
-  --color-state-speaking: #7c5ce5;
-  --color-state-listening: #16a474;
-  --color-state-thinking: #e89a35;
+  --color-state-speaking: #1b4332;
+  --color-state-listening: #2e8b57;
+  --color-state-thinking: #d9a441;
   --color-state-error: #d84f67;
 
   /* Sucesso / gravação */
-  --color-success-green: #36b37e;
-  --color-success-green-text: #36a173;
+  --color-success-green: #2e8b57;
+  --color-success-green-text: #2f7a50;
 
   /* Erro / ao vivo */
   --color-error-red: #b93d52;

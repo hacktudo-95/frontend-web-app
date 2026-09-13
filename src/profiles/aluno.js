@@ -44,7 +44,7 @@ export const alunoProfile = {
     },
     humor: {
       title: 'Diário de Humor',
-      subtitle: 'Maiêutica se importa com o seu bem-estar',
+      subtitle: 'Sabiá se importa com o seu bem-estar',
       Component: CheckinHumor,
       navActiveId: 'home',
     },
