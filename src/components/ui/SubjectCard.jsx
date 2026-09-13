@@ -1,7 +1,7 @@
 import { ProgressBar } from './ProgressBar'
 import { TopicRow } from './TopicRow'
 
-export function SubjectCard({ materia, expandido, onToggle }) {
+export function SubjectCard({ materia, expandido, onToggle, onAbrirMaterial }) {
   const temTopicos = materia.topicos.length > 0
 
   return (
@@ -31,7 +31,13 @@ export function SubjectCard({ materia, expandido, onToggle }) {
       {expandido && temTopicos && (
         <div className="mt-2 divide-y divide-app-bg border-t border-app-bg">
           {materia.topicos.map((topico) => (
-            <TopicRow key={topico.nome} nome={topico.nome} status={topico.status} />
+            <TopicRow
+              key={topico.nome}
+              nome={topico.nome}
+              status={topico.status}
+              materiais={topico.materiais}
+              onAbrirMaterial={onAbrirMaterial}
+            />
           ))}
         </div>
       )}

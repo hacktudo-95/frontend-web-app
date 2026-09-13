@@ -1,4 +1,5 @@
 import { CheckCircleIcon, HelpCircleIcon, LockIcon } from '../icons'
+import { TopicMaterialChip } from './TopicMaterialChip'
 
 const STATUS_CONFIG = {
   concluido: {
@@ -21,25 +22,40 @@ const STATUS_CONFIG = {
   },
 }
 
-export function TopicRow({ nome, status }) {
+export function TopicRow({ nome, status, materiais, onAbrirMaterial }) {
   const config = STATUS_CONFIG[status]
   const isBloqueado = status === 'bloqueado'
 
   return (
-    <div className="flex items-center justify-between py-2.5">
-      <div
-        className={`flex items-center gap-2 text-sm font-medium ${
-          isBloqueado ? 'text-text-light-gray' : 'text-text-dark'
-        }`}
-      >
-        <config.Icon className={`h-4 w-4 shrink-0 ${config.iconClassName}`} />
-        {nome}
+    <div className="py-2.5">
+      <div className="flex items-center justify-between">
+        <div
+          className={`flex items-center gap-2 text-sm font-medium ${
+            isBloqueado ? 'text-text-light-gray' : 'text-text-dark'
+          }`}
+        >
+          <config.Icon className={`h-4 w-4 shrink-0 ${config.iconClassName}`} />
+          {nome}
+        </div>
+        <span
+          className={`shrink-0 rounded-full px-2.5 py-1 text-xs font-medium ${config.pillClassName}`}
+        >
+          {config.label}
+        </span>
       </div>
-      <span
-        className={`shrink-0 rounded-full px-2.5 py-1 text-xs font-medium ${config.pillClassName}`}
-      >
-        {config.label}
-      </span>
+
+      {materiais?.length > 0 && (
+        <div className="mt-2 flex flex-wrap gap-1.5 pl-6">
+          {materiais.map((material) => (
+            <TopicMaterialChip
+              key={material.titulo}
+              tipo={material.tipo}
+              titulo={material.titulo}
+              onClick={() => onAbrirMaterial?.(material)}
+            />
+          ))}
+        </div>
+      )}
     </div>
   )
 }
